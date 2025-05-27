@@ -2,6 +2,8 @@ from typing import Union
 import os
 from openai import OpenAI
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 app = FastAPI()
@@ -12,9 +14,12 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 class HealthcareText(BaseModel):
     text: str
 
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
 @app.get("/")
-def read_root():
-    return {"Hello": "World"}
+async def read_root():
+    return FileResponse('dist/index.html')
 
 
 @app.get("/items/{item_id}")
