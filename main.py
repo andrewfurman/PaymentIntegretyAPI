@@ -58,7 +58,7 @@ async def analyze_healthcare_fraud(healthcare_text: HealthcareText):
         """
         
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4.1",
             messages=[
                 {"role": "system", "content": "You are a healthcare fraud detection expert. Analyze text for potential Fraud, Waste, or Abuse indicators."},
                 {"role": "user", "content": prompt}
