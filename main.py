@@ -14,8 +14,8 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 class HealthcareText(BaseModel):
     text: str
 
-from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+# Mount static files
+app.mount("/static", StaticFiles(directory="dist"), name="static")
 
 @app.get("/")
 async def read_root():
