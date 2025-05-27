@@ -14,3 +14,18 @@ deploymentTarget = "cloudrun"
 [[ports]]
 localPort = 8000
 externalPort = 80
+
+[workflows]
+
+[[workflows.workflow]]
+name = "React Dev Server"
+author = 10868327
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm install"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
