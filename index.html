@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare FWA Detection</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .title {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .placeholder-box {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .placeholder-text {
+            color: #6c757d;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #007bff;
+        }
+        .feature-title {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .feature-desc {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        .status-badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function HealthcareFWAPage() {
+            return (
+                <div className="container">
+                    <div className="header">
+                        <h1 className="title">Healthcare FWA Detection</h1>
+                        <p className="subtitle">Fraud, Waste & Abuse Detection System</p>
+                    </div>
+
+                    <div className="placeholder-box">
+                        <div className="placeholder-text">
+                            <h3>🏥 This is a placeholder page to find Fraud, Waste & Abuse in healthcare claims</h3>
+                            <p>This system will help identify suspicious patterns and irregularities in healthcare billing and claims processing.</p>
+                            <span className="status-badge">Coming Soon</span>
+                        </div>
+                    </div>
+
+                    <div className="features">
+                        <div className="feature-card">
+                            <div className="feature-title">🔍 Fraud Detection</div>
+                            <div className="feature-desc">
+                                Identify fraudulent billing practices, duplicate claims, and suspicious provider behavior patterns.
+                            </div>
+                        </div>
+                        
+                        <div className="feature-card">
+                            <div className="feature-title">💰 Waste Analysis</div>
+                            <div className="feature-desc">
+                                Detect unnecessary procedures, over-utilization of services, and inefficient resource allocation.
+                            </div>
+                        </div>
+                        
+                        <div className="feature-card">
+                            <div className="feature-title">⚠️ Abuse Prevention</div>
+                            <div className="feature-desc">
+                                Monitor for abusive healthcare practices, inappropriate billing codes, and policy violations.
+                            </div>
+                        </div>
+                        
+                        <div className="feature-card">
+                            <div className="feature-title">🤖 AI-Powered</div>
+                            <div className="feature-desc">
+                                Leverage advanced AI algorithms to analyze healthcare text and identify potential FWA indicators.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<HealthcareFWAPage />, document.getElementById('root'));
+    </script>
+</body>
+</html>
