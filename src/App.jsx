@@ -12,7 +12,7 @@ function App() {
     
     setLoading(true)
     try {
-      const response = await fetch('http://0.0.0.0:8000/analyze-fraud', {
+      const response = await fetch('/analyze-fraud', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
