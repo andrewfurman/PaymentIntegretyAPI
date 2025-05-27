@@ -15,7 +15,7 @@ class HealthcareText(BaseModel):
     text: str
 
 # Mount static files
-app.mount("/static", StaticFiles(directory="dist"), name="static")
+app.mount("/assets", StaticFiles(directory="dist/assets"), name="assets")
 
 @app.get("/")
 async def read_root():
