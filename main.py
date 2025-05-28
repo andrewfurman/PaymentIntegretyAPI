@@ -14,13 +14,13 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 class HealthcareText(BaseModel):
     text: str
 
-# Mount static files - serve entire dist directory for assets
+# Mount static files - serve assets directory and other static files
 app.mount("/assets", StaticFiles(directory="dist/assets"), name="assets")
 app.mount("/static", StaticFiles(directory="dist"), name="static")
 
 @app.get("/")
 async def read_root():
-    return FileResponse('dist/index.html')
+    return FileResponse('dist/index.html', media_type='text/html')
 
 
 @app.get("/items/{item_id}")
